@@ -48,3 +48,6 @@ if text_nr.isnumeric():
         quit()
 else:
     print('Entered value is not a number, exiting...')
+
+stripped_text = TEXTS[int(text_nr)-1].replace(',', '').replace('.', '').split()
+
