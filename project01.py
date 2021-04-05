@@ -48,6 +48,22 @@ if text_nr.isnumeric():
         quit()
 else:
     print('Entered value is not a number, exiting...')
+    quit()
 
 stripped_text = TEXTS[int(text_nr)-1].replace(',', '').replace('.', '').split()
+title_count = 0
+upper_count = 0
+lower_count = 0
+number_count = 0
+number_sum = 0
 
+for word in stripped_text:
+    if word.islower():
+        lower_count+=1
+    else:
+        upper_count+=1
+    if word.isnumeric():
+        number_count+=1
+        number_sum+=int(word)
+    if word.istitle():
+       title_count += 1
