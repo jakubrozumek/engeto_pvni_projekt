@@ -58,14 +58,14 @@ number_count = 0
 number_sum = 0
 
 for word in stripped_text:
-    if word.islower():
-        lower_count+=1
-    if word.isupper():
-        upper_count+=1
+    if word.islower() and word.isalpha():
+        lower_count += 1
+    if word.isupper() and word.isalpha():
+        upper_count += 1
     if word.isnumeric():
-        number_count+=1
-        number_sum+=int(word)
-    if word.istitle():
+        number_count += 1
+        number_sum += int(word)
+    if word.istitle() and word.isalpha():
        title_count += 1
 
 
