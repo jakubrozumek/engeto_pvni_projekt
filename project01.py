@@ -60,10 +60,18 @@ number_sum = 0
 for word in stripped_text:
     if word.islower():
         lower_count+=1
-    else:
+    if word.isupper():
         upper_count+=1
     if word.isnumeric():
         number_count+=1
         number_sum+=int(word)
     if word.istitle():
        title_count += 1
+
+
+print(f"""There are {len(stripped_text)} words in the selected text
+There are {title_count} titlecase words.
+There are {upper_count} uppercase words.
+There are {lower_count} lowercase words.
+There are {number_count} numeric strings.
+There sum of all numbers {number_sum}""")
