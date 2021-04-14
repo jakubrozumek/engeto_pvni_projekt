@@ -74,7 +74,7 @@ There are {title_count} titlecase words.
 There are {upper_count} uppercase words.
 There are {lower_count} lowercase words.
 There are {number_count} numeric strings.
-The sum of all numbers {number_sum}""")
+The sum of all numbers {number_sum}.""")
 
 lengths = {}
 for wrd in stripped_text:
@@ -86,7 +86,7 @@ for wrd in stripped_text:
 lengths = sorted(lengths.items())
 
 print(separator)
-print(f"{'LEN|':<4}{'OCCURENCES':^14}{'|NR.':<3}")
+print(f"{'LEN|':<4}{'OCCURENCES':^20}{'|NR.':<3}")
 print(separator)
 for i in lengths:
-    print(f"{(str(i[0]) + '|'):>4} {'*'*i[1]:<12} {('|' + str(i[1])):<3}")
+    print(f"{(str(i[0]) + '|'):>4} {'*'*i[1]:<18} {('|' + str(i[1])):<3}")
