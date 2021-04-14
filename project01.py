@@ -85,8 +85,8 @@ for wrd in stripped_text:
 
 lengths = sorted(lengths.items())
 
-print(f"""{separator}
-LEN| OCCURENCES |NR.
-{separator}""")
+print(separator)
+print(f"{'LEN|':<4}{'OCCURENCES':^14}{'|NR.':<3}")
+print(separator)
 for i in lengths:
-    print(str(i[0]) + '|' + '*'*i[1] + '|' + str(i[1]))
+    print(f"{(str(i[0]) + '|'):>4} {'*'*i[1]:<12} {('|' + str(i[1])):<3}")
