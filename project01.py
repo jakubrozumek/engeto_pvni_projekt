@@ -74,4 +74,19 @@ There are {title_count} titlecase words.
 There are {upper_count} uppercase words.
 There are {lower_count} lowercase words.
 There are {number_count} numeric strings.
-There sum of all numbers {number_sum}""")
+The sum of all numbers {number_sum}""")
+
+lengths = {}
+for wrd in stripped_text:
+    if len(wrd) not in lengths:
+        lengths[len(wrd)] = 1
+    else:
+        lengths[len(wrd)] += 1
+
+lengths = sorted(lengths.items())
+
+print(f"""{separator}
+LEN| OCCURENCES |NR.
+{separator}""")
+for i in lengths:
+    print(str(i[0]) + '|' + '*'*i[1] + '|' + str(i[1]))
